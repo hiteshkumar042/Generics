@@ -8,29 +8,13 @@ namespace Generics
 {
     internal class PrintArray
     {
-        public static void ToPrint(int[] inputtArray)
+        public static void ToPrint<T>(T [] inputArray)
         {
-            Console.WriteLine("Int Array : ");
-            foreach(var intData in inputtArray)
+            foreach(T element in inputArray)
             {
-                Console.Write(intData+" ");
+                Console.Write(element+" "); //printing element in array
             }
-        }
-        public static void ToPrint(double[] inputtArray)
-        {
-            Console.WriteLine("\nDouble Array : ");
-            foreach (var doubleData in inputtArray)
-            {
-                Console.Write(doubleData+" ");
-            }
-        }
-        public static void ToPrint(char[] inputtArray)
-        {
-            Console.WriteLine("\nChar Array : ");
-            foreach (var charData in inputtArray)
-            {
-                Console.Write(charData+" ");
-            }
+            Console.WriteLine(" "); //new line
         }
     }
 }
